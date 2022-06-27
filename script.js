@@ -94,8 +94,8 @@ function inputEquals(){
         //handle the final result 
         secondOperand = displayValue;
         result = operate(Number(firstOperand), Number(secondOperand), secondOperator);
-        if(result === "Ouch"){
-            displayValue = "Ouch";
+        if(result === "Ouch!"){
+            displayValue = "Ouch!";
         } else {
             displayValue = result.toString();
             firstOperand = displayValue;
@@ -108,8 +108,8 @@ function inputEquals(){
         //handle first operation :
         secondOperand = displayValue;
         result = operate(Number(firstOperand), Number(secondOperand), firstOperator);
-        if(result === "Ouch"){
-            displayValue = "Ouch";
+        if(result === "Ouch!"){
+            displayValue = "Ouch!";
         } else {
             displayValue = result.toString();
             firstOperand = displayValue;
@@ -156,7 +156,7 @@ function operate(a, b, op){ //taking two numbers and operator.
     }
     else if(op === '/'){
         if(b === 0){
-            return 'Ouch';
+            return 'Ouch!';
         }
         return (a / b);
     }
