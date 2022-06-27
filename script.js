@@ -29,7 +29,10 @@ function clickButton(){
             } else if(buttons[i].classList.contains('decimal')){
                 inputDecimal(buttons[i].value);
                 changeDisplay();
-            } else if(buttons[i].classList.contains('sign')){
+            } else if(buttons[i].classList.contains('percent')){
+                inputPercent(displayValue);
+            } 
+            else if(buttons[i].classList.contains('sign')){
                 inputSign(displayValue);
                 changeDisplay();
             } else if(buttons[i].classList.contains('clear')){
@@ -123,6 +126,10 @@ function inputEquals(){
 
 function inputSign(num){
     displayValue = (num * -1).toString();
+}
+
+function inputPercent(num) {
+    displayValue = (num/100).toString();
 }
 
 function clearDisplay (){
