@@ -45,7 +45,7 @@ clickButton();
 
 function inputOperand(operand){
     if(firstOperator === null){
-        if(displayValue === '0'){
+        if(displayValue === '0' || displayValue === 0){
             //this is the first click
             displayValue = operand;
         } else if (displayValue === firstOperand){
